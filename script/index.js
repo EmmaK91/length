@@ -28,3 +28,39 @@ function year(date){
 
 }
 console.log(year("2025-05-13"));
+
+
+// en funktion som tar 3 argument
+// varje operator skulle ha sin egen funktion
+function getMath(number1, number2, operator) {
+    // kika om number är number
+    if (typeof(number1) === "number" && typeof(number2) === "number" && typeof(operator) === "string") {
+        if (operator === "*") {
+            // kalla på en funktion som hanterar multiplikation
+            multiply(number1, number2);
+        } else if (operator === "+") {
+            // kalla på en funktion som hanterar addition
+            addition(number1, number2)
+        } else if (operator === "-") {
+            // kalla på en funktion som hanterar subtrahering
+            minus(number1, number2)
+        } else {
+            console.log("Ogiltigt val")
+        }
+    }
+};
+
+getMath(1,7,"*");
+
+function multiply(number1, number2){
+    const sum = number1 * number2;
+    console.log("summan blir:", sum);
+};
+function addition(number1, number2){
+    const sum = number1 + number2;
+    console.log("summan blir:", sum);
+};
+function minus(number1, number2){
+    const sum = number1 - number2;
+    console.log("summan blir:", sum);
+};
